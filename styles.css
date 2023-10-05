@@ -1,0 +1,92 @@
+body {
+    background-image: url('./images/background.png');
+    font-family: 'Grandstander', cursive;
+    margin: 0;
+}
+
+
+#title {
+    text-align: center;   
+    padding-top: 20px; 
+    margin-bottom: 30px;
+    font-size: 7vh;
+    -webkit-text-stroke: 3px black;
+    -webkit-text-fill-color: white;
+}
+
+#main-container {
+    display: flex;
+    background-color: #FDF5DF;
+    width: 80vw;
+    height: 70vh;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+}
+
+hr {
+    margin-right: 20px;
+    border: 3px solid #B5FF87;
+    border-radius: 8px;
+}
+
+.fruit_img {
+    width: 20vw;
+    padding: 45px 25px 10px 25px;
+}
+
+#fruit_name {
+    margin-top: 0;
+    margin-bottom: 3px;
+    font-size: 8vh;
+}
+
+#seasonality {
+    font-size: 4vh;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 30px;
+}
+
+.season {
+    width: 30px;
+    margin-top: 0;
+    padding-right: 20px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3.5vh;
+    padding-top: 30px;
+    padding-right: 30px;
+}
+
+#arrows {
+    padding-top: 20px;
+}
+
+.arrow {    
+    color: #0066FF;
+    transform: scale(2.2);
+    padding-right: 20px;
+}
+
+#random {
+    position: absolute;
+    left: 50%;    
+    height: 5.5vh;
+    width: 9vw;
+    margin-top: 20px;
+    border-radius: 6px;
+    font-size: 2vh;
+    font-weight: bold;
+    background-color: #96FF65;
+}

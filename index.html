@@ -9,7 +9,7 @@
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@200;300;400;500;600;700;800;900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@200;300;400;500;600;700;800;900&family=Grandstander:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Tillana:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!--Google Symbols-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -19,19 +19,28 @@
     <h1 id="title">Fresh Fruit Guidebook</h1>
     <div id="main-container">
         <div class="left">
-            <img src="./images/apples.png" alt="Picture of given fruit" /> <!--Fruit image; add src when images are finished-->
+            <img class="fruit_img" src="./images/apples.png" alt="Picture of given fruit" /> <!--Fruit image; add src when images are finished-->
             <h2 id="fruit_name">Apples</h2>
-            <h2 id="seasonality">Seasons</h2>
-            <span>Icons that show seasonality</span> <!--For JS, list names as objects and then use if statements to generate the appropriate image for each fruit-->
+            <h2 id="seasonality">Seasons:</h2>
+            <span><img class="season" src="./images/fall.png"/><img class="season" src="./images/winter.png"/><img class="season" src="./images/spring.png" /><img class="season" src="./images/summer.png" /></span> <!--For JS, list names as objects and then use if statements to generate the appropriate image for each fruit-->
             <!--For example, if object[X].season includes summer, display summer icon-->
         </div>
         <hr>
         <div class="right">
-            <p><b>How to Select:</b> Look for firm, shiny apples with smooth skin and stems. Apples should smell fresh.</p>
-            <p><b>Uses:</b> Rinse before eating. Apples can be peeled or eaten as is, and can be used in many ways, such as sliced with caramel or peanut butter, mashed into applesauce, squeezed into a fresh glass of apple juice, or baked in the oven with spices and vanilla. </p>
-            <p><b>Varieties:</b> honeycrsip, granny smith, gala, golden delicious, McIntosh, fuji </p>
-        </div>
+            <p id="selecting"><b>How to Select:</b> Look for firm, shiny apples with smooth skin and stems. Apples should smell fresh.</p>
+            <p id="uses"><b>Uses:</b> Rinse before eating. Apples can be peeled or eaten as is, and can be used in many ways, such as sliced with caramel or peanut butter, mashed into applesauce, squeezed into a fresh glass of apple juice, or baked in the oven with spices and vanilla. </p>
+            <p id="variety"><b>Varieties:</b> Honeycrsip, Granny Smith, Gala, Golden Delicious, McIntosh, Fuji </p> 
+            <div id="arrows">
+                <span class="material-symbols-outlined arrow">
+                    chevron_left
+                    </span>
+                <span class="material-symbols-outlined arrow">
+                    chevron_right
+                    </span>
+            </div>
+        </div>        
     </div>
+    <button id="random">Suprise Me</button>
 
 	<script src="script.js"></script>
   </body>

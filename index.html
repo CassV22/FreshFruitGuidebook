@@ -19,22 +19,22 @@
     <h1 id="title">Fresh Fruit Guidebook</h1>
     <div id="main-container">
         <div class="left">
-            <img class="fruit_img" src="./images/apples.png" alt="Picture of given fruit" /> <!--Fruit image; add src when images are finished-->
+            <img id="fruitImage" class="fruit_img" src="./images/apples.png" alt="Picture of given fruit" /> <!--Fruit image; add src when images are finished-->
             <h2 id="fruit_name">Apples</h2>
             <h2 id="seasonality">Seasons:</h2>
-            <span><img class="season" src="./images/fall.png"/><img class="season" src="./images/winter.png"/><img class="season" src="./images/spring.png" /><img class="season" src="./images/summer.png" /></span> <!--For JS, list names as objects and then use if statements to generate the appropriate image for each fruit-->
+            <span><img class="season fall" src="./images/fall.png"/><img class="season winter" src="./images/winter.png"/><img class="season spring" src="./images/spring.png" /><img class="season summer" src="./images/summer.png" /></span> <!--For JS, list names as objects and then use if statements to generate the appropriate image for each fruit-->
             <!--For example, if object[X].season includes summer, display summer icon-->
         </div>
         <hr>
         <div class="right">
-            <p id="selecting"><b>How to Select:</b> Look for firm, shiny apples with smooth skin and stems. Apples should smell fresh.</p>
-            <p id="uses"><b>Uses:</b> Rinse before eating. Apples can be peeled or eaten as is, and can be used in many ways, such as sliced with caramel or peanut butter, mashed into applesauce, squeezed into a fresh glass of apple juice, or baked in the oven with spices and vanilla. </p>
-            <p id="variety"><b>Varieties:</b> Honeycrsip, Granny Smith, Gala, Golden Delicious, McIntosh, Fuji </p> 
+            <div class="select"><p><b>How to Select:</b></p><p id="selecting"> Look for firm, shiny apples with smooth skin and stems. Apples should smell fresh.</p></div>
+            <div class="use"><p><b>Uses:</b></p><p id="uses"> Rinse before eating. Apples can be peeled or eaten as is, and can be used in many ways, such as sliced with caramel or peanut butter, mashed into applesauce, squeezed into a fresh glass of apple juice, or baked in the oven with spices and vanilla. </p></div>
+            <div class="varieties"><p><b>Varieties:</b></p><p id="variety"> Honeycrsip, Granny Smith, Gala, Golden Delicious, McIntosh, Fuji </p> </div>
             <div id="arrows">
-                <span class="material-symbols-outlined arrow">
+                <span class="material-symbols-outlined arrow leftArrow">
                     chevron_left
                     </span>
-                <span class="material-symbols-outlined arrow">
+                <span class="material-symbols-outlined arrow rightArrow">
                     chevron_right
                     </span>
             </div>

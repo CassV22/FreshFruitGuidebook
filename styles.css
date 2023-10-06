@@ -63,14 +63,24 @@ hr {
 .right {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     font-size: 3.5vh;
-    padding-top: 30px;
+    padding-top: 25px;
     padding-right: 30px;
+}
+
+.varieties, .use, .select {
+    margin: 0;
+    display: flex;
+    gap: 10px;
 }
 
 #arrows {
     padding-top: 20px;
+    display: flex;
+    margin-left: 47vw;
+    padding-top: 58vh;
+    position: fixed;
 }
 
 .arrow {    

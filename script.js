@@ -55,7 +55,7 @@ function newCard(currentItem) {
     fruitImg.src = current.image;
     fruitName.textContent = current.name;
     // if current.fall === true, then show .fall image, else hide it; same for all seasons
-    selectionTxt.textContent = current.selection;
+    selectionTxt.textContent =  current.selection;
     useTxt.textContent = current.uses;
-    varietyTxt.textContent = current.varieties;
+    varietyTxt.textContent = current.varieties; //need to add space between each
 }

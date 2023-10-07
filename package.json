@@ -1,0 +1,12 @@
+{ "name": "index",
+"version": "1.0.0",
+"description": "This is a carousel that features facts about fruits.",
+"main": "index.html",
+"scripts": {
+  "start": "npm run lite",
+  "lite": "lite-server"
+},
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

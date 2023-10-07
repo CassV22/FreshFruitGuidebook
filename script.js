@@ -1,3 +1,4 @@
+//Array of card data
 const fruits = [
     {
         name: "Apples",
@@ -8,7 +9,7 @@ const fruits = [
         summer: true,
         selection: "Look for firm, shiny apples with smooth skin and stems. Apples should smell fresh.",
         uses: "Rinse before eating. Apples can be peeled or eaten as is, and can be used in many ways, such as sliced with caramel or peanut butter, mashed into applesauce, squeezed into a fresh glass of apple juice, or baked in the oven with spices and vanilla.",
-        varities: "Honeycrisp, Granny Smith, Gala, Golden Delicious, McIntosh, Fuji"
+        varieties: "Honeycrisp, Granny Smith, Gala, Golden Delicious, McIntosh, Fuji"
     }, 
     {
         name: "Bananas",
@@ -177,6 +178,7 @@ const fruits = [
     },
 ];
 
+//Elements from left side of card
 const fruitImg = document.getElementById("fruitImage");
 const fruitName = document.getElementById("fruit_name");
 const seasons = document.getElementById("seasonality");
@@ -185,24 +187,41 @@ const winters = document.querySelector(".winter");
 const springs = document.querySelector(".spring");
 const summers = document.querySelector(".summer");
 
+//Elements from right side of card
 const selectionTxt = document.getElementById("selecting");
 const useTxt = document.getElementById("uses");
 const varietyTxt = document.getElementById("variety");
 
+//Arrows and button
 const leftArrow = document.querySelector(".leftArrow");
 const rightArrow = document.querySelector(".rightArrow");
 
 const supriseBtn = document.getElementById("random");
 
+//Initialize count/position of elements in array
 let currentItem = 0;
 
-rightArrow.addEventListener("click", () =>{
-    // alert('Clicked!');
-    currentItem++;
-    newCard(currentItem);
+rightArrow.addEventListener("click", () =>{    
+    currentItem++; 
+    if (currentItem > fruits.length) {
+        currentItem = 0;
+    }
+    newCard(currentItem);    
 });
 
+leftArrow.addEventListener("click", () => {
+    currentItem--;
+    if (currentItem < 0) {
+        currentItem = fruits.length - 1;
+    }
+    prevCard(currentItem);
+});
 //to fix: need to make text headers stay; need to adjust display for longer texts
+
+supriseBtn.addEventListener("click", () => {
+    randomCard();
+    newCard(currentItem);
+});
 
 function newCard(currentItem) {
     const current = fruits[currentItem];
@@ -230,5 +249,40 @@ function newCard(currentItem) {
     }
     selectionTxt.textContent =  current.selection;
     useTxt.textContent = current.uses;
-    varietyTxt.textContent = current.varieties; //need to add space between each
+    varietyTxt.textContent = current.varieties; 
+}
+
+function prevCard(currentItem) {
+    const current = fruits[currentItem];
+    fruitImg.src = current.image;
+    fruitName.textContent = current.name;   
+    if (current.fall === true) {
+        falls.style.display = "block";
+    } else {
+        falls.style.display  = "none";
+    }
+    if (current.winter === true) {
+        winters.style.display  = "block";
+    } else {
+        winters.style.display  = "none";
+    }
+    if (current.spring === true) {
+        springs.style.display  = "block";
+    } else {
+        springs.style.display  = "none";
+    }
+    if (current.summer === true) {
+        summers.style.display  = "block";
+    } else {
+        summers.style.display  = "none";
+    }
+    selectionTxt.textContent =  current.selection;
+    useTxt.textContent = current.uses;
+    varietyTxt.textContent = current.varieties;
+}
+
+function randomCard() {
+    let randNum = Math.floor(Math.random() * fruits.length);
+    currentItem = randNum;
+    return currentItem;
 }

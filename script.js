@@ -282,7 +282,7 @@ function prevCard(currentItem) {
 }
 
 function randomCard() {
-    let randNum = Math.floor(Math.random() * fruits.length);
+    let randNum = Math.floor(Math.random() * fruits.length + 1);
     currentItem = randNum;
     return currentItem;
 }
